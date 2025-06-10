@@ -15,9 +15,6 @@ var initCmd = &cobra.Command{
 		if err := os.MkdirAll("src", 0755); err != nil {
 			return err
 		}
-		if err := os.MkdirAll(".orus", 0755); err != nil {
-			return err
-		}
 		if _, err := os.Stat("orus.toml"); os.IsNotExist(err) {
 			f, err := os.Create("orus.toml")
 			if err != nil {
@@ -25,6 +22,13 @@ var initCmd = &cobra.Command{
 			}
 			defer f.Close()
 			fmt.Fprint(f, "[package]\nname = \"example\"\nversion = \"0.1.0\"\n\n[dependencies]\n")
+		}
+		if _, err := os.Stat("orus.lock"); os.IsNotExist(err) {
+			f, err := os.Create("orus.lock")
+			if err != nil {
+				return err
+			}
+			f.Close()
 		}
 		mainPath := filepath.Join("src", "main.orus")
 		if _, err := os.Stat(mainPath); os.IsNotExist(err) {

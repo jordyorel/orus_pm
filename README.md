@@ -53,8 +53,6 @@ my_project/
 ├── orus.lock
 ├── src/
 │   └── main.orus
-├── .orus/
-│   └── math/
 ```
 
 ---

@@ -113,9 +113,6 @@ my_project/
 │   └── main.orus
 ├── tests/
 │   └── math_test.orus
-├── .orus/
-│   └── math/
-│       └── utils.orus
 ```
 
 ---
