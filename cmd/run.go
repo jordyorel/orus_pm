@@ -25,6 +25,7 @@ var runCmd = &cobra.Command{
 		c := exec.Command("orusc", file)
 		c.Stdout = os.Stdout
 		c.Stderr = os.Stderr
+		c.Stdin = os.Stdin // Connect stdin to allow interactive input
 		err := c.Run()
 		if err != nil {
 			// Don't display raw "exit status X" errors - these are already handled by stderr output
