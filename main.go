@@ -1,6 +1,6 @@
 package main
 
-import "orus/cmd"
+import "ka/cmd"
 
 func main() {
 	cmd.Execute()

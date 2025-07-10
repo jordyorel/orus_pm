@@ -7,9 +7,9 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "orus",
-	Short: "Orus CLI and package manager",
-	Long:  `The official CLI tool for the Orus programming language`,
+	Use:   "ka",
+	Short: "A blazing-fast package manager for Orus.",
+	Long:  `ka is a next-generation package manager for the Orus programming language, designed to be fast, reliable, and easy to use.`,
 }
 
 func Execute() {
